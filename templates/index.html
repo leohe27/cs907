@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay Mark Validation Tool</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <h1>Essay Mark Validation Tool</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="author_name">Author Name:</label>
+        <input type="text" id="author_name" name="author_name" required>
+        <br>
+        <label for="essay">Essay:</label>
+        <textarea id="essay" name="essay"></textarea>
+        <br>
+        <label for="essay_file">Or upload an essay file:</label>
+        <input type="file" id="essay_file" name="essay_file" accept=".txt,.csv,.json,.xml">
+        <br>
+        <label for="prompt">Prompt:</label>
+        <textarea id="prompt" name="prompt" required></textarea>
+        <br>
+        <label for="rubric">Upload a marking rubric:</label>
+        <input type="file" id="rubric" name="rubric" accept=".txt,.csv,.json,.xml" required>
+        <br>
+        <label for="peer_marks">Enter peer marks (comma-separated):</label>
+        <input type="text" id="peer_marks" name="peer_marks" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
